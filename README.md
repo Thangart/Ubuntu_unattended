@@ -1,1 +1,3 @@
-# Ubuntu_untattended
+# Ubuntu untattended
+
+Simple script container for unattended Ubuntu installations
