@@ -4,7 +4,7 @@ USERNAME='tdo'
 # NETMASK='255.255.240.0'
 # GATEWAY='10.0.0.1'
 # NAMESERVER='10.0.1.3 10.0.1.4'
-PACKAGES='htop nano sudo python-minimal vim rsync dnsutils less ntp'
+PACKAGES='htop python3 vim rsync dnsutils less ntp'
 
 ###########################################
 ################# Updates #################
@@ -15,7 +15,7 @@ apt-get update && apt-get upgrade -y
 ###########################################
 ################## Apps ###################
 ###########################################
-# apt-get install $PACKAGES -y
+apt-get install $PACKAGES -y
 
 ###########################################
 ################## SSH ####################
@@ -39,8 +39,8 @@ chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
 #chown -R root:root /root/.ssh
 #
 ## Edit /etc/ssh/sshd_config
-#sed -i '/^PermitRootLogin/s/prohibit-password/yes/' /etc/ssh/sshd_config
-#sed -i -e 's/#PasswordAuthentication/PasswordAuthentication/g' /etc/ssh/sshd_config
+sed -i '/^PermitRootLogin/s/prohibit-password/yes/' /etc/ssh/sshd_config
+sed -i -e 's/#PasswordAuthentication/PasswordAuthentication/g' /etc/ssh/sshd_config
 
 ###########################################
 ################# Network #################
