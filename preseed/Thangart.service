@@ -1,0 +1,10 @@
+[unit]
+Description= Service to activate initial configuration script
+Wants = network-online.target
+After = network.target network-online.target networking.service
+[Service]
+Type=oneshot
+ExecStart=/bin/sh /var/tmp/firstrun.sh
+
+[Install]
+WantedBy=multi-user.target
