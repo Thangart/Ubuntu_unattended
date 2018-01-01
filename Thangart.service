@@ -1,8 +1,0 @@
-t]
-Description=Spark service
-
-[Service]
-ExecStart=/var/tmp/firstrun.sh
-
-[Install]
-WantedBy=multi-user.target
