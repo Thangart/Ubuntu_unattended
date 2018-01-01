@@ -1,8 +1,4 @@
-#!/bin/bash
-###########################################
-################ Variables ################
-###########################################
-HOSTNAME='working'
+STNAME='working'
 USERNAME='tdo'
 # IPADDRESS='10.0.5.5'
 # NETMASK='255.255.240.0'
@@ -14,7 +10,6 @@ PACKAGES='htop nano sudo python-minimal vim rsync dnsutils less ntp'
 ################# Updates #################
 ###########################################
 apt-get update && apt-get upgrade -y
-touch /usr/test
 # apt-get dist-upgrade
 
 ###########################################
@@ -27,13 +22,13 @@ touch /usr/test
 ###########################################
 
 ## Add SSH Key for default user
-#mkdir /home/$USERNAME/.ssh/
-#cat > /home/$USERNAME/.ssh/authorized_keys <<EOF
-#SSH-KEY HERE
-#EOF
-#chmod 700 /home/$USERNAME/.ssh
-#chmod 600 /home/$USERNAME/.ssh/authorized_keys
-#chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
+mkdir /home/$USERNAME/.ssh/
+cat > /home/$USERNAME/.ssh/authorized_keys <<EOF
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC8dQJ0fad01olNY9go8OAJd/YffKi3SfZc0X5iweQCE/iS35+kJEq3JOoITaX3BEO/eHZ5WrwnH1CO1h0RlgSDq8VSTN+8dDJEcb4KlGRSO46pnMLBtWHqL725TqvrXnVe4HRBsIlphlGRCPPKRPPqm9ZgM/HiU1IqbyqVBNPMXeVfH3qVS+QNRHluirQAO3Opv11MNm8ggj8fozuZHuOCNMWmEJlt7WDHmGE8ihL5gaQOFy3GFU/pmZls+IWGm6pMQ774aQV3kRFcCHECPZ6O6C+XU0SVTDqmu0aRawYlMlxu4XspMstHo21izwAPvzQhkYcqX7pGEDnog/OmGA3 stefan@Thangardium
+EOF
+chmod 700 /home/$USERNAME/.ssh
+chmod 600 /home/$USERNAME/.ssh/authorized_keys
+chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
 ## Add SSH Key for root user
 #mkdir /root/.ssh/
 #cat > /root/.ssh/authorized_keys <<EOF
