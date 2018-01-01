@@ -14,12 +14,13 @@ PACKAGES='htop nano sudo python-minimal vim rsync dnsutils less ntp'
 ################# Updates #################
 ###########################################
 apt-get update && apt-get upgrade -y
-apt-get dist-upgrade
+touch /usr/test
+# apt-get dist-upgrade
 
 ###########################################
 ################## Apps ###################
 ###########################################
-apt-get install $PACKAGES -y
+# apt-get install $PACKAGES -y
 
 ###########################################
 ################## SSH ####################
