@@ -7,6 +7,13 @@ USERNAME='tdo'
 PACKAGES='htop python3 vim rsync dnsutils less ntp'
 
 ###########################################
+################ Repo #####################
+###########################################
+## sets the repo to the internal apt server
+
+wget "" > /etc/apt/sources.list
+
+###########################################
 ################# Updates #################
 ###########################################
 apt-get update && apt-get upgrade -y
