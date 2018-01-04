@@ -4,7 +4,7 @@ USERNAME='tdo'
 # NETMASK='255.255.240.0'
 # GATEWAY='10.0.0.1'
 # NAMESERVER='10.0.1.3 10.0.1.4'
-PACKAGES='htop python3 vim rsync dnsutils less ntp'
+PACKAGES='htop python3 vim rsync dnsutils less ntp zsh fonts-powerline git ufw fail2ban'
 
 ###########################################
 ################# Updates #################
